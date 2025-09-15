@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+body {
+  background: aliceblue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* color: navy; */
+}
+
+.weather-app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: darkslateblue;
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      color: orange;
+      font-weight: bolder;
+    }
+
+    .btn {
+      background: lemonchiffon;
+      border: none;
+      color: steelblue;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bolder;
+    }
+  }
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  input,
+  select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(223, 232, 240);
+    /* how to change select options when selected?? */
+  }
+}
+
+.search-box button {
+  background: steelblue;
+  border: none;
+  color: lemonchiffon;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.weather-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+
+  .current-weather {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: left;
+    padding: 1rem;
+    background: rgb(206, 222, 238);
+    border-radius: 10px;
+    color: steelblue;
+  }
+
+  .extra-details {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    background: rgba(255, 250, 205, 0.727);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: orange;
+  }
+
+  .forecast {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    color: aliceblue;
+
+    .day {
+      background: steelblue;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+  }
+}

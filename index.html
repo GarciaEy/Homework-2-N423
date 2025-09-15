@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <div class="weather-app">
+    <header>
+      <h1>⋆☔｡Weather App ⋆🔆｡</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Help</a>
+        <button class="btn">Login</button>
+        <button class="btn">Signup</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city or zip" />
+        <select id="daySelector">
+          <option value="1">1 Day</option>
+          <option value="3">3 Days</option>
+          <option value="5" selected>5 Days</option>
+          <option value="7">7 Days</option>
+        </select>
+        <select id="unitSelector">
+          <option value="c" selected>°C</option>
+          <option value="f">°F</option>
+        </select>
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <section class="weather-display">
+        <div class="current-weather">
+          <h2 id="cityName">City Name</h2>
+          <p id="date"></p>
+          <h1 id="temperature">--°</h1>
+          <p id="condition">--</p>
+        </div>
+
+        <div class="extra-details">
+          <div>
+            <strong>Feels Like:</strong> <span id="feelsLike">--°</span>
+          </div>
+          <div><strong>Humidity:</strong> <span id="humidity">--%</span></div>
+          <div><strong>Wind:</strong> <span id="wind">--</span></div>
+          <div><strong>UV Index:</strong> <span id="uv">--</span></div>
+          <div>
+            <strong>Pressure:</strong> <span id="pressure">-- hPa</span>
+          </div>
+          <div><strong>Dew Point:</strong> <span id="dewPoint">--°</span></div>
+          <div><strong>Heat Index:</strong> <span id="heatIndex">--</span></div>
+          <div>
+            <strong>Precipitation:</strong> <span id="precipitation">--</span>
+          </div>
+        </div>
+
+        <div class="forecast" id="forecast"></div>
+      </section>
+    </main>
+  </div>
+
+  <body>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script type="module" src="model/model.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>
